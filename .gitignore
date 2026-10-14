@@ -1,0 +1,10 @@
+# DB 파일 (run.sh 로 언제든 재생성 가능)
+*.db
+*.sqlite3
+
+# 파이썬
+__pycache__/
+*.py[cod]
+
+# macOS
+.DS_Store
