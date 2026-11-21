@@ -24,6 +24,16 @@ cd study-tracker-db
 4. 행 수 확인
 5. 쿼리 20개 실행 → `results/query_results.md` 생성
 
+### 쿼리 하나만 골라서 보기
+
+```bash
+./show.sh          # 쿼리 목록
+./show.sh 14       # Q14 의 SQL 과 실행 결과를 한 화면에
+```
+
+`sql/03_queries.sql` 안의 `-- Q14.` 머리말을 찾아 그 블록만 꺼내 실행합니다.
+쿼리는 파일에 그대로 있고, 스크립트는 고르는 일만 합니다.
+
 ### 직접 들여다보기
 
 ```bash
@@ -182,6 +192,7 @@ sqlite3 study_tracker.db < sql/04_constraint_tests.sql
 ```
 study-tracker-db/
 ├── run.sh                        # 처음부터 다시 만드는 스크립트
+├── show.sh                       # 쿼리 하나만 골라 보는 도우미
 ├── sql/
 │   ├── 01_schema.sql             # CREATE TABLE + 제약조건 + 인덱스
 │   ├── 02_sample_data.sql        # INSERT (각 테이블 10행 이상)
